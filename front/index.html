@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ejercicio CampoACampo</title>
+  </head>
+  <body>
+    <div class="table-wrapper">
+      <div class="d-flex">
+        <div class="alert alert-warning price_dolar">
+          Precio dolar: u$d <span>215</span>
+        </div>
+        <button onclick="showModal()" class="info">Agregar Producto</button>
+      </div>
+      <div class="modal">
+        <form>
+          <label for="nombre">Nombre producto</label>
+          <input
+            type="text"
+            placeholder="Nombre..."
+            id="nombre"
+            name="nombre"
+          />
+          <label for="precio">Precio producto</label>
+          <input
+            type="number"
+            placeholder="Precio..."
+            id="precio"
+            name="precio"
+          />
+          <div class="d-flex">
+            <button type="button" class="danger" onclick="closeModal()">
+              Cerrar
+            </button>
+            <button type="submit" class="success">Agregar</button>
+          </div>
+        </form>
+      </div>
+      <div id="alertProducto" class="alert alert-success d-none"></div>
+      <table id="tableProducts" class="table">
+        <thead>
+          <th>Id Producto</th>
+          <th>Nombre Producto</th>
+          <th>Precio (ARS)</th>
+          <th>Precio (USD)</th>
+          <th>Accion</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="custom.js"></script>
+  </body>
+</html>
